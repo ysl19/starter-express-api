@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+
 app.get("/api/:userInput", (req, res) => {
   const foodName = req.params.userInput.toLowerCase();
 
@@ -40,4 +41,5 @@ app.get("/api/:userInput", (req, res) => {
 
 app.listen(process.env.PORT || 8000, () => {
   console.log(`We are on PORT ${process.env.PORT || 8000}`);
+  console.log(__dirname);
 });
